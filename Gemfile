@@ -28,8 +28,11 @@ gem 'jbuilder', '2.5.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-# Use Bootstrap for frontend UI and layout
+# Use Bootstrap for frontend UI and layout 
   gem "bootstrap-sass", '3.3.7'
+  
+# Remediate activejob vulnerability with upgrade
+#  gem "activejob", ">= 5.0.7.1"
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
