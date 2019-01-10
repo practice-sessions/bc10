@@ -1,15 +1,24 @@
 # README
 
-This project is a training pilot project, will be done in Ruby on Rails.
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-All contributors are obliged to open features branch on their local repos (on your local pc/laptop/workstation), and push in the name of the featues branch you have created locally.
+Things you may want to cover:
 
-A named team member will then be tasked with reviewing the code and, if all is clear (no merge conflicts), the feature branch will then be merged into 'development' branch.
+* Ruby version
 
-Please DO NOT push directly into master branch. In other words, DO NOT do a git PUSH origin MASTER.
+* System dependencies
 
-Contributors include:
+* Configuration
 
-Danman-01
+* Database creation
 
-Please add your name when you join. Thanks
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
