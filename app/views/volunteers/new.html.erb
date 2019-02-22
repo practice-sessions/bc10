@@ -1,1 +1,48 @@
-<h1>This our volunteer page</h1>
+<div class="container">
+  <div class="row">
+    <h3 class="text-center">Volunteer With Us</h3>
+    <div class="col-md-4 col-md-offset-4">
+      <div class="well">
+        <%= form_for "/volunteer" do |f| %>
+          <div class="form-group">
+            <%= f.label :name %>
+            <%= f.text_field :name, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :email %>
+            <%= f.text_field :email, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :twitter %>
+            <%= f.text_field :twitter, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :linkedin %>
+            <%= f.text_field :linkedin, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :What_programming_language_are_you_able_to_teach? %>
+            <%= f.text_area :What_programming_language_are_you_able_to_teach?, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :What_duration_of_weeks_or_months_do_you_intend_to_volunteer? %>
+            <%= f.text_area :What_duration_of_weeks_or_months_do_you_intend_to_volunteer?, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :How_many_hours_a_week_do_you_have_available_to_volunteer? %>
+            <%= f.text_area :How_many_hours_a_week_do_you_have_available_to_volunteer?, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :How_did_you_hear_about_us? %>
+            <%= f.text_area :How_did_you_hear_about_us?, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :comments %>
+            <%= f.text_area :comments, class: 'form-control' %>
+          </div>
+          <%= f.submit 'Click to Volunteer', class: 'btn btn-default' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
