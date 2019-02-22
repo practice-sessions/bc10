@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190217160209) do
+ActiveRecord::Schema.define(version: 20190222162917) do
 
   create_table "contacts", force: :cascade do |t|
     t.string   "name"
@@ -18,6 +18,20 @@ ActiveRecord::Schema.define(version: 20190217160209) do
     t.text     "comments"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "volunteers", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "twitter"
+    t.string   "linkedin"
+    t.text     "What_programming_language_are_you_able_to_teach?"
+    t.text     "What_duration_of_weeks_or_months_do_you_intend_to_volunteer?"
+    t.text     "How_many_hours_a_week_do_you_have_available_to_volunteer?"
+    t.text     "How_did_you_hear_about_us?"
+    t.text     "comments"
+    t.datetime "created_at",                                                   null: false
+    t.datetime "updated_at",                                                   null: false
   end
 
 end
