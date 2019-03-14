@@ -6,9 +6,11 @@ class VolunteersController < ApplicationController
   def create
     @volunteer = Volunteer.new(volunteer_params)
     if  @volunteer.save
-      redirect_to new_volunteer_path, notice: "Information updated."
+      flash[:sucess] = "Information updated."
+      redirect_to new_volunteer_path
     else
-      redirect_to new_volunteer_path, notice: "Error occured."
+      flash[:error] = @volunteer.errors.full_messages.join(", ")
+      redirect_to new_volunteer_path
     end
   end
 
