@@ -1,7 +1,20 @@
-<%= image_tag @user.profile.avatar.url %>
-<%= @user.profile.first_name %> <%= @user.profile.last_name %>
-<%= @user.profile.job_title %>
-<%= @user.profile.phone_number %>
-<%= @user.profile.contact_email %>
-
-<%= @user.profile.decription %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 text-center">
+      <%= image_tag @user.profile.avatar.url, class: 'avatar-show-img' %>
+    </div>
+      <div class="col-md-6">
+        <h1><%= @user.profile.first_name %> <%= @user.profile.last_name %></h1>
+        <h3><%= @user.profile.job_title %></h3>
+      </div>
+      <div class="well profile-block profile-contact-info">
+        <h3>Contact Information</h3>
+        <%= @user.profile.phone_number %></br>
+        <%= @user.profile.contact_email %>
+      </div>
+       <div class="well profile-block profile-description">
+          <h3>Description</h3>
+          <%= @user.profile.decription %>
+       </div>
+    </div>
+</div>
