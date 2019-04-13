@@ -1,6 +1,7 @@
 <div class="home-callout text-center container-fluid">
    <h1>Welcome to BootCampus home page</h1>
    <h3>A Web Applications Volunteer Training Matchmaking site for linking Volunteers with Institutions</h3>
+
    <%= link_to "Create your profile!", new_user_profile_path(user_id: current_user.id) if user_signed_in? %>
 </div>
 
