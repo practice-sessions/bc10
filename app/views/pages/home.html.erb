@@ -1,12 +1,32 @@
 <div class="home-callout text-center container-fluid">
    <h1>Welcome to BootCampus home page</h1>
    <h3>A Web Applications Volunteer Training Matchmaking site for linking Volunteers with Institutions</h3>
-
-   <%= link_to "Create your profile!", new_user_profile_path(user_id: current_user.id) if user_signed_in? %>
 </div>
-
-
-
+<div class="container home-signup-link">
+  <div class="row">
+    <% if user_signed_in? %>
+    <div class="col-md-6">
+      <div class="well">
+        <h2 class="text-center">Your Profile</h2>
+        <% if current_user.profile %>
+        <%= link_to "Edit your profile", "#" , class: "btn btn-default btn-lg btn-block" %>
+        <%= link_to "View your profile", user_path(id:current_user.id), class: "btn btn-default btn-lg btn-block" %>
+        <% else %>
+        <p>Create your profile so that can share your information to volunteer</p>
+       <%= link_to "Create your profile!", new_user_profile_path(user_id: current_user.id), class: 'btn btn-lg btn-block' %>
+       <% end %>
+      </div>
+    </div>
+  <% end %>
+  </div>
+</div>
+<div class="col-md-6">
+  <div class="well">
+    <h2 class="text-center">Bootcampus Community</h2>
+    <p> Be a part of the Bootcampus community and volunteer to train students developers</p>
+    <%= link_to "Visit Bootcampus Community", "#" , class: "btn btn-default btn-lg btn-block" %>
+  </div>
+</div>
 <img class="irc_mi" src="https://pbs.twimg.com/media/Doxle4GXkAE066D.jpg" onload="typeof google==='object'&amp;&amp;google.aft&amp;&amp;google.aft(this)" alt="Image result for coding training images in Africa" width="1400" height="560">
 <div class="container text-center">
  <h2 class="section-head">Who We Are</h2>
