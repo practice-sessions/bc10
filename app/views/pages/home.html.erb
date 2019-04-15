@@ -9,11 +9,11 @@
       <div class="well">
         <h2 class="text-center">Your Profile</h2>
         <% if current_user.profile %>
-        <%= link_to "Edit your profile", "#" , class: "btn btn-default btn-lg btn-block" %>
-        <%= link_to "View your profile", user_path(id:current_user.id), class: "btn btn-default btn-lg btn-block" %>
+        <%= link_to "Edit your profile", edit_user_profile_path(user_id: current_user.id) , class: 'btn btn-default btn-lg btn-block' %>
+        <%= link_to "View your profile", user_path(id:current_user.id), class: 'btn btn-default btn-lg btn-block' %>
         <% else %>
         <p>Create your profile so that can share your information to volunteer</p>
-       <%= link_to "Create your profile!", new_user_profile_path(user_id: current_user.id), class: 'btn btn-lg btn-block' %>
+       <%= link_to "Create your profile!", new_user_profile_path(user_id: current_user.id), class: 'btn btn-default btn-lg btn-block' %>
        <% end %>
       </div>
     </div>
@@ -23,7 +23,7 @@
 <div class="col-md-6">
   <div class="well">
     <h2 class="text-center">Bootcampus Community</h2>
-    <p> Be a part of the Bootcampus community and volunteer to train students developers</p>
+    <p> Be a part of the Bootcampus community and volunteer to train newbie Developers</p>
     <%= link_to "Visit Bootcampus Community", "#" , class: "btn btn-default btn-lg btn-block" %>
   </div>
 </div>
