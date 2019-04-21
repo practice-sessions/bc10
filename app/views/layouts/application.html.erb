@@ -3,12 +3,48 @@
   <head>
     <title>Bc10</title>
     <%= csrf_meta_tags %>
-
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+  <div class='container'>
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <%= link_to root_path, class: "navbar-brand" do %>
+          <i class="fa fa-desktop"></i>
+          Bootcampus
+        <% end %>
+    </div>
+    <div class="collapse navbar-collapse" id="main-nav-collapse">
+      <div class="nav navbar-nav navbar-right">
+            <% if user_signed_in? %>
+              <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "navbar-btn" %>
+            <% else %>
+              <%= link_to "Log In", new_user_session_path, class: "navbar-btn" %>
+            <% end %>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+         <li><%= link_to "About", about_path %></li>
+         <li><%= link_to "Volunteer", volunteer_path %></li>
+         <li><%= link_to "Contact Us", new_contact_path %></li>  
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div>
+</nav>
+<div class="container">
+   <% flash.each do |type, msg| %>
+     <%= content_tag :div, msg, class: "alert alert-#{type}" %>
+   <% end %>
+</div>
+<%= yield %>
+
   </body>
 </html>
