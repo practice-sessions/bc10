@@ -1,2 +1,17 @@
 <h1 class="text-center"><%= link_to "Volunteer with us", new_volunteer_path %></h1>
 <img src="https://www.lifeofpix.com/wp-content/uploads/2018/05/308-name7185-jj-1600x1136.jpg" width="1400px" height="500px" />
+<div class="col-md-2 col-md-offset-5">
+  <h2>How it works</h2>
+</div>
+<div class="col-md-6 col-sm-12 text-center">
+ <h3>1. Contact Us</h3>
+ <p>Fill out the <%= link_to "Volunteer with us form", new_volunteer_path %>and hit send.</p>
+</div>
+<div class="col-md-6 col-sm-12 text-center">
+ <h3>2. join our Bootcampus Community</h3>
+ <p>By signing up and <%= link_to "Create your profile!", new_user_profile_path(user_id: current_user.id) %></p>
+</div>
+<div class="col-md-8 col-md-offset-2 text-center">
+ <h3>3. We will get email you on how to get started</h3>
+ <p>Choose your language and country within Africa</p>
+</div>
